@@ -9,4 +9,4 @@ Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('linksubmit', 'LinkSubmitController@index')->name('linksubmit');
 Route::post('linksubmit', 'LinkSubmitController@send')->name('linksubmit.send');
 
-Route::get('/deletecat/{id}','LinkSubmitController@delete')->name('linksubmit.delete');
+Route::delete('/deletecat/{id}','LinkSubmitController@delete')->name('linksubmit.delete');
