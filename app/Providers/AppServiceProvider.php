@@ -1,10 +1,12 @@
 <?php
 
-//namespace App\Providers;
+namespace App\Providers;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+
+use Illuminate\Support\Facades\URL;
 
 /**
  * Class AppServiceProvider.
