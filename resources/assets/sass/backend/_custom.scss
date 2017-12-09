@@ -1,1 +1,9 @@
 // Here you can add other styles
+
+.dropdown-toggle::after {
+    margin: 0 0.5em 0 0.2em;
+}
+
+.sidebar .nav {
+    width: 208px;
+}

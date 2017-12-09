@@ -15859,7 +15859,7 @@ base-chart.chart {
   padding: 0.5rem 1rem;
   margin-right: 0;
   background-color: #fff;
-  background-image: url("/img/backend/logo.png");
+  background-image: none;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 70px auto;
@@ -18221,5 +18221,13 @@ hr.transparent {
 
 *[dir="rtl"].callout-dark {
   border-right-color: #29363d;
+}
+
+.dropdown-toggle::after {
+  margin: 0 0.5em 0 0.2em;
+}
+
+.sidebar .nav {
+  width: 208px;
 }
 

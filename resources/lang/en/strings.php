@@ -29,6 +29,11 @@ return [
             'welcome' => 'Welcome',
         ],
 
+        'linksubmit' => [
+            'title'   => 'Link Submit',
+            'welcome' => 'Welcome',
+        ],
+
         'general' => [
             'all_rights_reserved' => 'All Rights Reserved.',
             'are_you_sure'        => 'Are you sure you want to do this?',
@@ -74,7 +79,7 @@ return [
 
     'emails' => [
         'auth' => [
-            'account_confirmed' => 'Your account has been confirmed.',
+            'account_confirmed'       => 'Your account has been confirmed.',
             'error'                   => 'Whoops!',
             'greeting'                => 'Hello!',
             'regards'                 => 'Regards,',
