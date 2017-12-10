@@ -17,7 +17,7 @@
         # Redirect all to https://www
         RewriteEngine On
         RewriteCond %{SERVER_PORT} 80
-        RewriteRule ^(.*)$ https://www.hexagonbrain.com//$1 [R,L]
+        RewriteRule ^(.*)$ https://www.hexagonbrain.com/$1 [R,L]
 
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
