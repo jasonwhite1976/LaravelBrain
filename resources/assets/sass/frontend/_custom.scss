@@ -1,1 +1,29 @@
 // Override the Bootstrap defaults without modifying key, versioned files.
+
+body {
+  font-size: 14px !important;
+}
+
+.card-body {
+  min-height: 300px;
+}
+
+.dropdown-menu {
+  background-color: #333 !important;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #333 !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: #333 !important;
+}
+
+.form-control {
+  font-size: 14px !important;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+    font-size: 14px !important;
+  }

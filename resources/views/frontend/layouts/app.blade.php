@@ -13,6 +13,23 @@
         <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
         @yield('meta')
 
+        <!-- Favicon -->
+        <link href="favicon.ico" rel="shortcut icon" />
+        <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700,800' rel='stylesheet' type='text/css' />
+
+        <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/font-awesome.min.css') }}" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/vanillabox.css') }}" />
+        <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/animsition.min.css') }}" />
+
+        <!-- Main CSS-->
+        <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/style-fluid.css') }}" />
+
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
 
@@ -23,20 +40,81 @@
         @stack('after-styles')
     </head>
     <body>
-        <div id="app">
-            @include('includes.partials.logged-in-as')
-            @include('frontend.includes.nav')
+      <div class="">
+        <main>
+          <div id="app">
+              @include('includes.partials.logged-in-as')
+              @include('frontend.includes.nav')
 
-            <div class="container">
-                @include('includes.partials.messages')
-                @yield('content')
-            </div><!-- container -->
-        </div><!-- #app -->
+              <div class="container topper">
+                  @include('includes.partials.messages')
+                  @yield('content')
+              </div><!-- container -->
+
+              @include('frontend.includes.footer')
+
+          </div><!-- #app -->
+        </main>
+      </div>
 
         <!-- Scripts -->
+
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/jquery-1.12.4.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/jquery.vanillabox.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/animsition.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/isotope.pkgd.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/validator.min.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/form-scripts.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/map.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/scripts.js') }}"></script>
+
         @stack('before-scripts')
         {!! script(mix('js/frontend.js')) !!}
         @stack('after-scripts')
+<script>
+
+	// Hide Header on on scroll down
+	var didScroll;
+	var lastScrollTop = 0;
+	var delta = 5;
+	var navbarHeight = $('.header').outerHeight();
+
+	$(window).scroll(function(event){
+		didScroll = true;
+		console.log('scroll');
+	});
+
+	setInterval(function() {
+		if (didScroll) {
+			hasScrolled();
+			didScroll = false;
+		}
+	}, 250);
+
+	function hasScrolled() {
+		var st = $(this).scrollTop();
+
+		// Make sure they scroll more than delta
+		if(Math.abs(lastScrollTop - st) <= delta)
+			return;
+
+		// If they scrolled down and are past the navbar, add class .nav-up.
+		// This is necessary so you never see what is "behind" the navbar.
+		if (st > lastScrollTop && st > navbarHeight){
+			// Scroll Down
+			$('.header').removeClass('nav-down').addClass('nav-up');
+		} else {
+			// Scroll Up
+			if(st + $(window).height() < $(document).height()) {
+				$('.header').removeClass('nav-up').addClass('nav-down');
+			}
+		}
+
+		lastScrollTop = st;
+	}
+
+</script>
 
         @include('includes.partials.ga')
     </body>
