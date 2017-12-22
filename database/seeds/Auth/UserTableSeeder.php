@@ -23,7 +23,7 @@ class UserTableSeeder extends Seeder
         User::create([
             'first_name'        => 'Jason',
             'last_name'         => 'White',
-            'email'             => 'jasonwhite1976@yahoo.com',
+            'email'             => 'jasonwhite1976@yahoo.co.uk',
             'password'          => bcrypt('FoxcubSG19'),
             'confirmation_code' => md5(uniqid(mt_rand(), true)),
             'confirmed'         => true,
