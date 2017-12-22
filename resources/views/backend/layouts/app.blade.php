@@ -20,6 +20,8 @@
     <!-- Otherwise apply the normal LTR layouts -->
     {{ style(mix('css/backend.css')) }}
 
+    <link rel="stylesheet" href="{{ URL::asset('css/summernote-bs4.css') }}" />
+
     @stack('after-styles')
 </head>
 
@@ -31,7 +33,7 @@
 
         <main class="main">
             @include('includes.partials.logged-in-as')
-            {!! Breadcrumbs::render() !!}
+            
 
             <div class="container-fluid">
                 <div class="animated fadeIn">
@@ -53,6 +55,7 @@
     <!-- Scripts -->
     @stack('before-scripts')
     {!! script(mix('js/backend.js')) !!}
+    <script type="text/javascript" src="{{ URL::asset('js/summernote.min.js') }}"></script>
     @stack('after-scripts')
 </body>
 </html>

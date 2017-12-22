@@ -34,6 +34,11 @@ return [
             'welcome' => 'Welcome',
         ],
 
+        'post' => [
+            'title'   => 'Post Submit',
+            'welcome' => 'Welcome',
+        ],
+
         'general' => [
             'all_rights_reserved' => 'All Rights Reserved.',
             'are_you_sure'        => 'Are you sure you want to do this?',

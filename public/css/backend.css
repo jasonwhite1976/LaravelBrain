@@ -18231,3 +18231,7 @@ hr.transparent {
   width: 208px;
 }
 
+.modal-backdrop.show {
+  display: none;
+}
+

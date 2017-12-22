@@ -38643,6 +38643,10 @@ $.grayLightest = '#f8f9fa';
 
 'use strict';
 
+$(document).ready(function () {
+    $('#summernote').summernote();
+});
+
 /****
  * MAIN NAVIGATION
  */
