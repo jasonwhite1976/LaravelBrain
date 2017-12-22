@@ -14,9 +14,9 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('post_content');
-            $table->timestamps();
+              $table->increments('id');
+              $table->string('post_content');
+              $table->timestamps();
         });
     }
 
@@ -25,10 +25,10 @@ class CreatePostsTable extends Migration
      *
      * @return void
      */
-     /*
+
     public function down()
     {
         Schema::dropIfExists('posts');
     }
-    */
+    
 }
