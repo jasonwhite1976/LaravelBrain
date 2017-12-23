@@ -29,24 +29,6 @@ class UserTableSeeder extends Seeder
             'confirmed'         => true,
         ]);
 
-        User::create([
-            'first_name'        => 'Backend',
-            'last_name'         => 'User',
-            'email'             => 'executive@executive.com',
-            'password'          => bcrypt('FoxcubSG19'),
-            'confirmation_code' => md5(uniqid(mt_rand(), true)),
-            'confirmed'         => true,
-        ]);
-
-        User::create([
-            'first_name'        => 'Default',
-            'last_name'         => 'User',
-            'email'             => 'user@user.com',
-            'password'          => bcrypt('FoxcubSG19'),
-            'confirmation_code' => md5(uniqid(mt_rand(), true)),
-            'confirmed'         => true,
-        ]);
-
         $this->enableForeignKeys();
     }
 }

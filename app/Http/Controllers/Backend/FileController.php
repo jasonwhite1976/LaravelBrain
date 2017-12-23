@@ -53,48 +53,36 @@ class FileController extends Controller
 
     public function post(Request $request)
     {
+      $this->validate($request, [
+        'post_content' => 'required'
+      ]);
 
-      /*
-        $data = $request->validate([
-            'post_content' => 'required',
-        ]);
+      $data=$request->input('post_content');
 
-        $post = new \App\Posts;
-        $post->post_content = $data['post_content'];
-*/
-        //$post->save();
+      $post = new \App\Posts;
 
+      $dom = new \DomDocument();
 
-        $this->validate($request, [
-            'post_content' => 'required'
-        ]);
+      $dom->loadHtml($data, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
 
+      $images = $dom->getElementsByTagName('img');
+      foreach($images as $k => $img)
+      {
+        $data = $img->getAttribute('src');
+        list($type, $data) = explode(';', $data);
+        list(, $data)      = explode(',', $data);
+        $data = base64_decode($data);
+        $image_name = "/uploads/" . time().$k.'.png';
+        $path = public_path() . $image_name;
+        file_put_contents($path, $data);
+        $img->removeAttribute('src');
+        $img->setAttribute('src', $image_name);
+      }
 
-        $data=$request->input('post_content');
+      $post->post_content = $dom->saveHTML();
+      $post->save();
 
-        $post = new \App\Posts;
-
-        $dom = new \DomDocument();
-
-        $dom->loadHtml($data, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-
-        $images = $dom->getElementsByTagName('img');
-         foreach($images as $k => $img){
-             $data = $img->getAttribute('src');
-             list($type, $data) = explode(';', $data);
-             list(, $data)      = explode(',', $data);
-             $data = base64_decode($data);
-             $image_name= "/uploads/" . time().$k.'.png';
-             $path = public_path() . $image_name;
-             file_put_contents($path, $data);
-             $img->removeAttribute('src');
-             $img->setAttribute('src', $image_name);
-         }
-
-        $post->post_content = $dom->saveHTML();
-        $post->save();
-
-        return redirect('/admin/allposts');
+      return redirect('/admin/allposts');
     }
 
     public function delete($id)

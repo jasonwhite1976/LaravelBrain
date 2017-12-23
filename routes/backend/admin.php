@@ -12,8 +12,8 @@ Route::delete('/deletecat/{id}', 'LinkSubmitController@delete')->name('linksubmi
 
 Route::get('post', 'FileController@index')->name('post');
 Route::get('post/{id}', 'FileController@thepost')->name('post.thepost');
-Route::post('post', 'FileController@post')->name('post.post');
 
+Route::post('post', 'FileController@post')->name('post.post');
 
 Route::get('allposts', 'FileController@allposts')->name('post.allposts');
 
