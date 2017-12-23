@@ -1,10 +1,10 @@
 <?php
 
-use Faker\Generator as Faker;
+use Faker\Generator;
 
 /* @var Illuminate\Database\Eloquent\Factory $factory */
 
-$factory->define(App\Link::class, function (Faker $faker) {
+$factory->define(App\Link::class, function (Generator $faker) {
     return [
         'title' => substr($faker->sentence(2), 0, -1),
         'url' => $faker->url,

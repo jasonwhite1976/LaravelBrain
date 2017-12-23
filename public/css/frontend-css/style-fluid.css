@@ -197,6 +197,15 @@ i {
     width: 24px;
     height: 3px; }
 
+.icon-bar {
+  background: #fff;
+  padding-bottom: 3px;
+}
+
+.navbar:before, .navbar:after {
+  content: none;
+}
+
 /**********************************
  05. Call to action
 **********************************/
@@ -730,8 +739,15 @@ p.gallery-text {
     width: 30%; }
 
   .single-work-intro-content p {
-    width: 80%; } }
+    width: 80%; }
+  }
 @media only screen and (max-width: 992px) {
+  .navbar-toggle {
+    display: block;
+   }
+  #nav1 {
+    height: auto;
+  }
   #intro h1 {
     font-size: 100px; }
 
@@ -776,7 +792,8 @@ p.gallery-text {
 
   .navbar-default .navbar-collapse {
     border: none;
-    background-color: rgba(51, 51, 51, 0.8); }
+    background-color: rgba(51, 51, 51, 0.8);
+    display: block; }
 
   .select-work {
     color: #292929; }

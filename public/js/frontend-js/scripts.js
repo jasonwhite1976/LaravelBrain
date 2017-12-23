@@ -3,7 +3,7 @@
 $(document).ready(function(){
 
   // ----------- animsition -----------
-
+/*
   $(".animsition").animsition({
     inClass: 'fade-in',
     outClass: 'fade-out',
@@ -26,7 +26,7 @@ $(document).ready(function(){
     overlayParentElement : 'body',
     transition: function(url){ window.location.href = url; }
   });
-
+*/
 
   // ----------- vanillabox -----------
   if( $('a.image').length > 0 ) {
@@ -67,6 +67,7 @@ $(document).ready(function(){
   });
 
   // ----------- collapse expanded bootstrap nav -----------
+
   $('#nav1 .nav a').on('click', function(){
     if($('.navbar-toggle').css('display') !='none'){
       $("#nav1 .navbar-toggle").trigger( "click" );

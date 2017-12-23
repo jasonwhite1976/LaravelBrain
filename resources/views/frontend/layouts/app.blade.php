@@ -62,11 +62,11 @@
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/jquery-1.12.4.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/bootstrap.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/jquery.vanillabox.js') }}"></script>
-        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/animsition.min.js') }}"></script>
+        <!-- <script type="text/javascript" src="{{ URL::asset('js/frontend-js/animsition.min.js') }}"></script> -->
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/isotope.pkgd.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/validator.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/form-scripts.js') }}"></script>
-        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/map.js') }}"></script>
+        <!-- <script type="text/javascript" src="{{ URL::asset('js/frontend-js/map.js') }}"></script> -->
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/scripts.js') }}"></script>
 
         @stack('before-scripts')
