@@ -8,15 +8,15 @@
         <span class="icon-bar"></span>
     </button>
 
-    <div class="navbar-collapse collapse justify-content-end" id="navbarSupportedContent">
+    <div class="navbar-collapse collapse  justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
             @if (config('locale.status') && count(config('locale.languages')) > 1)
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownLanguageLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">{{ __('menus.language-picker.language') }} ({{ strtoupper(app()->getLocale()) }})</a>
 
                     @include('includes.partials.lang')
-                </li>
+                </li> -->
             @endif
 
             @auth
