@@ -1,7 +1,6 @@
 <header class="app-header navbar">
     <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">☰</button>
-    <!-- <a class="navbar-brand" href="#"></a> -->
-    <a class="navbar-brand" href="#">Laravel Brain</a>
+    <a class="navbar-brand" href="//www.hexagonbrain.com/admin/dashboard">Hexagon Brain - Admin Dashboard</a>
     <button class="navbar-toggler sidebar-minimizer d-md-down-none" type="button">☰</button>
 
     <ul class="nav navbar-nav d-md-down-none">
