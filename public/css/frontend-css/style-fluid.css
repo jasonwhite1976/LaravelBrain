@@ -784,7 +784,9 @@ p.gallery-text {
     font-size: 70px; }
   .single-work-intro-content p {
     width: 95%;
-    font-size: 24px; } }
+    font-size: 24px; }
+  }
+
 @media only screen and (max-width: 768px) {
   #nav1 li a {
     font-size: 14px;
@@ -808,7 +810,15 @@ p.gallery-text {
 
   .single-work-info li {
     display: inline-block;
-    margin-right: 20px; } }
+    margin-right: 20px; }
+  }
+
+@media (min-width: 768px) {
+  .navbar-collapse .collapse {
+    display: block !important;
+  }
+}
+
 @media only screen and (max-width: 620px) {
   #intro h1 {
     font-size: 80px; }
@@ -819,6 +829,7 @@ p.gallery-text {
   footer li {
     margin-left: 10px;
     margin-right: 10px; } }
+
 @media only screen and (max-width: 480px) {
   #intro h1 {
     font-size: 60px; }
@@ -836,7 +847,12 @@ p.gallery-text {
   footer li {
     margin-left: 4px;
     margin-right: 4px; } }
+
 @media only screen and (max-width: 380px) {
+  #nav1 {
+    padding: 0;
+  }
+
   #intro h1 {
     font-size: 50px; }
 

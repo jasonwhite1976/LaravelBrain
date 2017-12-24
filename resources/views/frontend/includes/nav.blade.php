@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <div class="navbar-collapse collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
             @if (config('locale.status') && count(config('locale.languages')) > 1)
                 <li class="nav-item dropdown">
