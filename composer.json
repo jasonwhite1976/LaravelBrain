@@ -11,6 +11,7 @@
         "arcanedev/no-captcha": "^5.0",
         "creativeorange/gravatar": "~1.0",
         "davejamesmiller/laravel-breadcrumbs": "^4.1",
+        "ext-gd": "*",
         "fideloper/proxy": "~3.3",
         "hieu-le/active": "^3.5",
         "intervention/image": "dev-master",
