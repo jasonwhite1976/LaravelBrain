@@ -10,6 +10,8 @@
 
     <div class="navbar-collapse collapse  justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/allposts">Posts</a></li>
+
             @if (config('locale.status') && count(config('locale.languages')) > 1)
                 <!-- <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownLanguageLink" data-toggle="dropdown"

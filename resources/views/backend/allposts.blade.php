@@ -4,17 +4,18 @@
     <div class="row mb-12">
         <div class="col">
 
-          <h1>All Posts</h1>
+          <h1>Edit Posts</h1>
 
             <div class="links">
-              <ol>
-                @foreach ($posts as $post)
+              <ul>
+                @foreach ($allposts as $post)
                     <li>
-                      <a href="{{ URL::to('admin/post/'.$post->id) }}">{!! $post->id !!}</a>
-                      <a href="{{ URL::to('admin/deletepost/'.$post->id) }}" data-method="delete"> &nbsp; <span class="fa fa-trash"></span></a>
+                      <a class="post-link" href="{{ URL::to('admin/post/'.$post->slug) }}">{!! $post->slug !!}</a>
+                      <a class="post-link" href="{{ URL::to('admin/editpost/'.$post->slug) }}"> &nbsp; <span class="fa fa-pencil"></span></a>
+                      <a class="post-link" href="{{ URL::to('admin/deletepost/'.$post->slug) }}" data-method="delete"> &nbsp; <span class="fa fa-trash"></span></a>
                     </li>
                 @endforeach
-              </ol>
+              </ul>
             </div>
 
         </div><!--col-->

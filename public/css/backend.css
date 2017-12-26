@@ -18235,3 +18235,16 @@ hr.transparent {
   display: none;
 }
 
+.links ul {
+  list-style: none;
+}
+
+.post-link {
+  color: #000;
+}
+
+.post-link:hover {
+  color: blue !important;
+  text-decoration: none;
+}
+

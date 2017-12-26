@@ -1,6 +1,6 @@
 <header class="app-header navbar">
     <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">☰</button>
-    <a class="navbar-brand" href="//www.hexagonbrain.com/admin/dashboard">Hexagon Brain - Admin Dashboard</a>
+    <a class="navbar-brand" href="//www.hexagonbrain.com/admin/dashboard">Hexagon Brain</a>
     <button class="navbar-toggler sidebar-minimizer d-md-down-none" type="button">☰</button>
 
     <ul class="nav navbar-nav d-md-down-none">
@@ -42,7 +42,8 @@
             </a>
 
             <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-header text-center">
+
+                <!-- <div class="dropdown-header text-center">
                     <strong>Heading</strong>
                 </div>
                 <a class="dropdown-item" href="/links"><i class="fa fa-link"></i> See Links</a>
@@ -50,7 +51,8 @@
 
                 <div class="dropdown-header text-center">
                     <strong>Heading</strong>
-                </div>
+                </div>-->
+
                 <a class="dropdown-item" href="{{ route('frontend.auth.logout') }}"><i class="fa fa-lock"></i> {{ __('navs.general.logout') }}</a>
             </div>
         </li>

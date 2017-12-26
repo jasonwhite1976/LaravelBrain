@@ -1,10 +1,10 @@
-@extends('backend.layouts.app')
+@extends('frontend.layouts.app')
 
 @section('content')
     <div class="row mb-12">
         <div class="col">
 
-          <h1>Post Title Here</h1>
+          <h1>{!! $post->title !!}</h1>
 
             <div class="">
               {!! $post->post_content !!}
@@ -13,5 +13,3 @@
         </div><!--col-->
     </div><!--row-->
 @endsection
-
-['user' => $user->name]

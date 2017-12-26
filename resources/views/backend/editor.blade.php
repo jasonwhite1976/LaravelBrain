@@ -4,7 +4,7 @@
 
 <h1>A New Post</h1>
 
-<form action="/admin/post" method="post">
+<form action="/admin/newpost" method="post">
 
   {{ csrf_field() }}
 
@@ -14,7 +14,11 @@
 
             <strong>Details:</strong>
 
-            <textarea id="summernote" class="form-control" name="post_content"></textarea>
+            <textarea id="summernote" class="form-control" name="post_content">
+              @if( ! empty($post))
+                  {!! $post->post_content !!}
+              @endif
+            </textarea>
 
         </div>
 

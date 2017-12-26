@@ -10,6 +10,9 @@ Route::post('contact/send', 'ContactController@send')->name('contact.send');
 
 Route::get('links', 'LinksController@index')->name('links');
 
+Route::get('allposts', 'PostsController@index')->name('post.allposts');
+Route::get('post/{slug}', 'PostsController@thepost')->name('post.thepost');
+
 /*
  * These frontend controllers require the user to be logged in
  * All route names are prefixed with 'frontend.'

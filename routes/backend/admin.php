@@ -10,11 +10,15 @@ Route::get('linksubmit', 'LinkSubmitController@index')->name('linksubmit');
 Route::post('linksubmit', 'LinkSubmitController@send')->name('linksubmit.send');
 Route::delete('/deletecat/{id}', 'LinkSubmitController@delete')->name('linksubmit.delete');
 
-Route::get('post', 'FileController@index')->name('post');
-Route::get('post/{id}', 'FileController@thepost')->name('post.thepost');
+Route::get('newpost', 'PostsController@index')->name('post');
+Route::post('newpost', 'PostsController@newpost')->name('post.newpost');
+//Route::post('newpost/{id}', 'PostsController@post')->name('post.newpost');
 
-Route::post('post', 'FileController@post')->name('post.post');
+Route::get('editpost/{slug}', 'PostsController@editpost')->name('post.editpost');
+Route::patch('edit_post/{slug}', 'PostsController@edit_post')->name('post.edit_post');
 
-Route::get('allposts', 'FileController@allposts')->name('post.allposts');
+Route::get('post/{slug}', 'PostsController@thepost')->name('post.thepost');
 
-Route::delete('/deletepost/{id}', 'FileController@delete')->name('post.delete');
+Route::get('allposts', 'PostsController@allposts')->name('post.allposts');
+
+Route::delete('/deletepost/{slug}', 'PostsController@delete')->name('post.delete');

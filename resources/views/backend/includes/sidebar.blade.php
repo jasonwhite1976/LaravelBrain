@@ -9,6 +9,25 @@
                 <a class="nav-link {{ active_class(Active::checkUriPattern('admin/dashboard')) }}" href="{{ route('admin.dashboard') }}"><i class="icon-speedometer"></i> {{ __('menus.backend.sidebar.dashboard') }}</a>
             </li>
 
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/post*'), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="icon-list"></i> Posts
+                </a>
+
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/newpost')) }}" href="{{ route('admin.post') }}">
+                            New Post
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/allposts')) }}" href="{{ route('admin.post.allposts') }}">
+                            Edit Posts
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             <li class="nav-title">
                 {{ __('menus.backend.sidebar.system') }}
             </li>
@@ -60,6 +79,7 @@
                     </li>
                 </ul>
             </li>
+
         </ul>
     </nav>
 </div><!--sidebar-->
