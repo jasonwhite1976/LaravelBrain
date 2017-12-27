@@ -1,8 +1,20 @@
 // Override the Bootstrap defaults without modifying key, versioned files.
 
 body {
-  font-size: 14px !important;
-  color: #fff !important;
+  font-size: 14px;
+  color: #fff;
+}
+
+.full-screen {
+  min-height: 100vh;
+}
+
+img {
+  width: 100% !important;
+}
+
+ul {
+  list-style: none;
 }
 
 .card-body {
@@ -10,25 +22,41 @@ body {
 }
 
 .dropdown-menu {
-  background-color: #333 !important;
+  background-color: #333;
 }
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    background-color: #333 !important;
+    background-color: #333;
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
-  background-color: #333 !important;
+  background-color: #333;
 }
 
 .form-control {
-  font-size: 14px !important;
+  font-size: 14px;
 }
 
 .btn-sm, .btn-group-sm > .btn {
-    font-size: 14px !important;
+  font-size: 14px;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-weight: 400;
+  font-weight: 400;
+}
+
+.card div {
+    color: #000;
+}
+
+.card div i {
+    color: #000;
+}
+
+.card-text {
+  color: #000;
+}
+
+.card .form-horizontal .form-group {
+  margin: auto;
 }

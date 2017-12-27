@@ -12,7 +12,6 @@ Route::delete('/deletecat/{id}', 'LinkSubmitController@delete')->name('linksubmi
 
 Route::get('newpost', 'PostsController@index')->name('post');
 Route::post('newpost', 'PostsController@newpost')->name('post.newpost');
-//Route::post('newpost/{id}', 'PostsController@post')->name('post.newpost');
 
 Route::get('editpost/{slug}', 'PostsController@editpost')->name('post.editpost');
 Route::patch('edit_post/{slug}', 'PostsController@edit_post')->name('post.edit_post');

@@ -4,14 +4,14 @@
 // Font Awesome
 @import "../../../../node_modules/font-awesome/scss/font-awesome";
 
-// Bootstrap Overrides
-@import "custom";
-
 // Bootstrap
 @import "../../../../node_modules/bootstrap/scss/bootstrap";
 
 // Global
 @import "global";
+
+// Bootstrap Overrides
+@import "custom";
 
 // Pages
 @import "pages/dashboard";

@@ -71,7 +71,6 @@ h1 {
   font-size: 170px;
   font-weight: 400;
   letter-spacing: 1px;
-  z-index: 101;
   position: relative;
   margin: 0; }
 
@@ -80,13 +79,6 @@ h2 {
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center; }
-  h2::after {
-    background-color: #95EFFF;
-    content: "";
-    height: 1px;
-    width: 60px;
-    display: block;
-    margin: 36px auto 36px auto; }
 
 h3 {
   font-style: 30px;
@@ -150,7 +142,8 @@ i {
   background: #333;
   margin-bottom: 0;
   padding: 0px 70px;
-  z-index: 101; }
+  z-index: 101;
+  border-radius: 0; }
 #nav1 li a {
     color: #fff;
     font-size: 13px;
@@ -654,8 +647,8 @@ div.gm-style-cc {
 footer {
   background-color: #333333;
   text-align: center;
-  padding-top: 66px;
-  padding-bottom: 40px; }
+  padding-top: 80px;
+  padding-bottom: 0; }
   footer a {
     color: #fff;
     font-size: 16px;

@@ -18223,6 +18223,34 @@ hr.transparent {
   border-right-color: #29363d;
 }
 
+img {
+  width: 100% !important;
+}
+
+.img-avatar {
+  width: 35px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 400;
+}
+
+.app-header.navbar .navbar-brand {
+  height: auto;
+  border: none;
+}
+
 .dropdown-toggle::after {
   margin: 0 0.5em 0 0.2em;
 }

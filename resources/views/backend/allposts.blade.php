@@ -10,9 +10,9 @@
               <ul>
                 @foreach ($allposts as $post)
                     <li>
-                      <a class="post-link" href="{{ URL::to('admin/post/'.$post->slug) }}">{!! $post->slug !!}</a>
-                      <a class="post-link" href="{{ URL::to('admin/editpost/'.$post->slug) }}"> &nbsp; <span class="fa fa-pencil"></span></a>
-                      <a class="post-link" href="{{ URL::to('admin/deletepost/'.$post->slug) }}" data-method="delete"> &nbsp; <span class="fa fa-trash"></span></a>
+                      <a title="view post" class="post-link" href="{{ URL::to('admin/post/'.$post->slug) }}">{!! $post->slug !!}</a>
+                      <a title="edit post" class="post-link" href="{{ URL::to('admin/editpost/'.$post->slug) }}"> &nbsp; <span class="fa fa-pencil"></span></a>
+                      <a title="delete post" class="post-link" href="{{ URL::to('admin/deletepost/'.$post->slug) }}" data-method="delete"> &nbsp; <span class="fa fa-trash"></span></a>
                     </li>
                 @endforeach
               </ul>

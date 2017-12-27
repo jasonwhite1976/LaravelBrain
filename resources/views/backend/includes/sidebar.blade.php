@@ -11,7 +11,7 @@
 
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/post*'), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle" href="#">
-                    <i class="icon-list"></i> Posts
+                    <i class="icon-pencil"></i> Posts
                 </a>
 
                 <ul class="nav-dropdown-items">

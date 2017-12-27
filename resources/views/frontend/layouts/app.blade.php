@@ -40,13 +40,12 @@
         @stack('after-styles')
     </head>
     <body>
-      <div class="">
         <main>
           <div id="app">
               @include('includes.partials.logged-in-as')
               @include('frontend.includes.nav')
 
-              <div class="container topper">
+              <div class="container topper full-screen">
                   @include('includes.partials.messages')
                   @yield('content')
               </div><!-- container -->
@@ -55,7 +54,6 @@
 
           </div><!-- #app -->
         </main>
-      </div>
 
         <!-- Scripts -->
 

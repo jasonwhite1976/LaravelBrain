@@ -3053,55 +3053,6 @@
   clip: auto;
 }
 
-body {
-  font-size: 14px !important;
-  color: #fff !important;
-}
-
-.card-body {
-  min-height: 300px;
-}
-
-.dropdown-menu {
-  background-color: #333 !important;
-}
-
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:focus,
-.navbar-default .navbar-nav > .open > a:hover {
-  background-color: #333 !important;
-}
-
-.dropdown-item:focus,
-.dropdown-item:hover {
-  background-color: #333 !important;
-}
-
-.form-control {
-  font-size: 14px !important;
-}
-
-.btn-sm,
-.btn-group-sm > .btn,
-.btn-group-sm > .btn {
-  font-size: 14px !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-weight: 400;
-}
-
 /*!
  * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -12824,6 +12775,83 @@ a.text-dark:hover {
 .logged-in-as {
   margin: 0;
   border-radius: 0;
+}
+
+body {
+  font-size: 14px;
+  color: #fff;
+}
+
+.full-screen {
+  min-height: 100vh;
+}
+
+img {
+  width: 100% !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.card-body {
+  min-height: 300px;
+}
+
+.dropdown-menu {
+  background-color: #333;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: #333;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #333;
+}
+
+.form-control {
+  font-size: 14px;
+}
+
+.btn-sm,
+.btn-group-sm > .btn,
+.btn-group-sm > .btn {
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 400;
+}
+
+.card div {
+  color: #000;
+}
+
+.card div i {
+  color: #000;
+}
+
+.card-text {
+  color: #000;
+}
+
+.card .form-horizontal .form-group {
+  margin: auto;
 }
 
 .profile-picture {
