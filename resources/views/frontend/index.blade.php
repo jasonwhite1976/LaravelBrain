@@ -11,6 +11,7 @@
                 </div>
                 <div class="card-body">
                     {{ __('strings.frontend.welcome_to', ['place' => app_name()]) }}
+                    <p>There's a lot to do...</p>
                 </div>
             </div><!--card-->
         </div><!--col-->

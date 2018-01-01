@@ -18276,3 +18276,8 @@ h6,
   text-decoration: none;
 }
 
+.sidebar-fixed .main,
+.sidebar-fixed .app-footer {
+  margin-top: 30px;
+}
+

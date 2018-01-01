@@ -41,3 +41,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: blue !important;
     text-decoration: none;
 }
+
+.sidebar-fixed .main, .sidebar-fixed .app-footer {
+  margin-top: 30px;
+}
