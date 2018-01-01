@@ -117,7 +117,7 @@ $(document).ready(function(){
 
 	$(window).scroll(function(event){
 		didScroll = true;
-		console.log('scroll');
+		//console.log('scroll');
 	});
 
 	setInterval(function() {

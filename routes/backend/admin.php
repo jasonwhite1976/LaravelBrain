@@ -21,3 +21,23 @@ Route::get('post/{slug}', 'PostsController@thepost')->name('post.thepost');
 Route::get('allposts', 'PostsController@allposts')->name('post.allposts');
 
 Route::delete('/deletepost/{slug}', 'PostsController@delete')->name('post.delete');
+
+/*********/
+
+Route::get('/{pageId}', function($pageId){
+  return view('backend.page',['pageId' => $pageId]);
+});
+
+Route::get('comments/{pageId}', 'CommentController@index')->name('comments');
+
+Route::post('comments', 'CommentController@store')->name('comments.store');
+
+Route::post('comments/{commentId}/{type}', 'CommentController@update')->name('comments.update');
+
+
+
+Route::get('post/comments/{slug}', 'CommentController@index')->name('comments');
+
+Route::post('post/comments', 'CommentController@store')->name('comments.store');
+
+Route::post('post/comments/{slug}/{type}', 'CommentController@update')->name('comments.update');

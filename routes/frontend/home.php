@@ -13,6 +13,12 @@ Route::get('links', 'LinksController@index')->name('links');
 Route::get('allposts', 'PostsController@index')->name('post.allposts');
 Route::get('post/{slug}', 'PostsController@thepost')->name('post.thepost');
 
+Route::get('post/comments/{slug}', 'CommentController@index')->name('comments');
+
+Route::post('post/comments', 'CommentController@store')->name('comments.store');
+
+Route::post('post/comments/{commentId}/{type}', 'CommentController@update')->name('comments.update');
+
 /*
  * These frontend controllers require the user to be logged in
  * All route names are prefixed with 'frontend.'

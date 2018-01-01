@@ -29,6 +29,7 @@
 
         <!-- Main CSS-->
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/style-fluid.css') }}" />
+        <link rel="stylesheet" href="{{ URL::asset('css/comment.css') }}" />
 
         {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
@@ -38,6 +39,13 @@
         {{ style(mix('css/frontend.css')) }}
 
         @stack('after-styles')
+
+        <script>window.csrf = "{{ csrf_token() }}";
+        @if (Auth::user())
+        window.user = {"name":"{{ Auth::user()->name }}","email":"{{ Auth::user()->email }}","id":"{{ Auth::user()->id }}"};
+        @endif
+        </script>
+
     </head>
     <body>
         <main>
@@ -80,7 +88,7 @@
 
 	$(window).scroll(function(event){
 		didScroll = true;
-		console.log('scroll');
+		//console.log('scroll');
 	});
 
 	setInterval(function() {

@@ -1,6 +1,7 @@
 @extends('backend.layouts.app')
 
 @section('content')
+    <link rel="stylesheet" href="{{ URL::asset('css/comment.css') }}" />
     <div class="row mb-12">
         <div class="col">
 
@@ -8,6 +9,10 @@
 
             <div class="">
               {!! $post->post_content !!}
+            </div>
+
+            <div id="app">
+              <comment comment-url="{{ $post->slug }}"></comment>
             </div>
 
         </div><!--col-->
