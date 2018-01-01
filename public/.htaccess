@@ -2,10 +2,8 @@
     RewriteEngine On
 
     RewriteCond %{HTTP_HOST} !localhost
-    #RewriteCond %{HTTP_HOST} !^(.+)\.(.+)\.(.+)
-    #RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [L,R=301]
-
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTP_HOST} !^(.+)\.(.+)\.(.+)
+    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [L,R=301]
 
 </IfModule>
 
@@ -31,7 +29,7 @@
     RewriteRule ^ index.php [L]
 
     # Force SSL
-    # RewriteCond %{HTTPS} !=on
-    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 </IfModule>
