@@ -30,7 +30,7 @@
         </div>
         <form class="form" name="form">
             <div class="form-row">
-                <a href="//www.hexagonbrain.com/login"><textarea
+                <a href="login"><textarea
                   class="input"
                   placeholder="Add comment..."
                   required></textarea></a>
