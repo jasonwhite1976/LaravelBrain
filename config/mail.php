@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'jasonwhite1976@yahoo.co.uk'),
-        'name' => env('MAIL_FROM_NAME', 'hexagon Brain'),
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@hexagonbrain.com'),
+        'name' => env('MAIL_FROM_NAME', 'Hexagon Brain'),
     ],
 
     /*
