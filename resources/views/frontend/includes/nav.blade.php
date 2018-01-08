@@ -1,6 +1,7 @@
 <nav id="nav1" class="header navbar navbar-expand-lg">
 
-    <a href="{{ route('frontend.index') }}" class="navbar-brand">{{ app_name() }}</a>
+    <!-- <a href="{{ route('frontend.index') }}" class="navbar-brand">{{ app_name() }}</a> -->
+    <a href="{{ route('frontend.index') }}" class="navbar-brand"><img src="//www.hexagonbrain.com/img/HexagonBrain.png" alt="Hexagon Brain" style="width:60px;"/><span> {{ app_name() }}</span></a>
     <button class="navbar-toggle navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('labels.general.toggle_navigation') }}">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>

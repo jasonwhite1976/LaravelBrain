@@ -18,7 +18,8 @@
         <link href="apple-touch-icon.png" rel="apple-touch-icon" />
 
         <!-- Fonts -->
-        <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700,800' rel='stylesheet' type='text/css' />
+        <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700,800' rel='stylesheet' type='text/css' /> -->
+        <link href="https://fonts.googleapis.com/css?family=Jura:400,600" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/font-awesome.min.css') }}" />
 
