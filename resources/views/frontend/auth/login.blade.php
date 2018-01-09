@@ -3,6 +3,7 @@
 @section('title', app_name() . ' | Login')
 
 @section('content')
+<div class="container topper">
     <div class="row justify-content-center align-items-center">
         <div class="col col-sm-8 align-self-center">
             <div class="card">
@@ -79,4 +80,5 @@
             </div><!--card-->
         </div><!-- col-md-8 -->
     </div><!-- row -->
+  </div>
 @endsection
