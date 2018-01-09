@@ -12866,6 +12866,10 @@ h6,
   height: 69px;
 }
 
+.slick-slide img {
+  width: 100%;
+}
+
 .profile-picture {
   max-height: 90px;
 }

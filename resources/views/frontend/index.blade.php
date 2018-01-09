@@ -2,7 +2,13 @@
 
 @section('content')
 
+<div class="slick-container">
+  <div><img src="//www.hexagonbrain.com/img/frontend/building.jpg" /></div>
+  <div><img src="//www.hexagonbrain.com/img/frontend/leaves.jpg" /></div>
+  <div><img src="//www.hexagonbrain.com/img/frontend/coralbrain.jpg" /></div>
+</div>
 
+<div class="container">
     <div class="row mb-4">
         <div class="col">
             <div class="card">
@@ -38,4 +44,5 @@
             </div><!--card-->
         </div><!--col-->
     </div><!--row-->
+  </div>
 @endsection

@@ -3,6 +3,7 @@
 @section('title', app_name() . ' | Contact Us')
 
 @section('content')
+<div class="container topper">
     <div class="row justify-content-center">
         <div class="col col-sm-8 align-self-center">
             <div class="card">
@@ -46,20 +47,6 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
-                                    {{ html()->label(__('validation.attributes.frontend.phone'))->for('phone') }}
-
-                                    {{ html()->text('phone')
-                                        ->class('form-control')
-                                        ->placeholder(__('validation.attributes.frontend.phone'))
-                                        ->attribute('maxlength', 191)
-                                        ->required() }}
-                                </div><!--form-group-->
-                            </div><!--col-->
-                        </div><!--row-->
-
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
                                     {{ html()->label(__('validation.attributes.frontend.message'))->for('message') }}
 
                                     {{ html()->textarea('message')
@@ -82,4 +69,5 @@
             </div><!--card-->
         </div><!--col-->
     </div><!--row-->
+</div>
 @endsection

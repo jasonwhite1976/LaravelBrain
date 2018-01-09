@@ -27,12 +27,13 @@
  01. Generic Styles
 **********************************/
 body {
-  background-color: #333333;
+  /*background-color: #333;*/
   height: 100%;
   overflow-x: hidden; }
 
 main {
-  background-color: #333333;
+  /*background-color: #333;*/
+  background-color: #fff;
   z-index: 2;
   position: relative;
   height: 100%; }
@@ -139,13 +140,15 @@ i {
 #nav1 {
   width: 100%;
   height: 70px;
-  background: #333;
+  /*background: #333;*/
+  background: rgba(255, 255, 255, 0.7);
   margin-bottom: 0;
   padding: 0px 70px;
   z-index: 101;
   border-radius: 0; }
 #nav1 li a {
-    color: #fff;
+    /*color: #fff;*/
+    color: #222;
     font-size: 13px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -157,7 +160,8 @@ i {
       color: #95EFFF;
       opacity: 0.75; }
   #nav1 a {
-    color: #fff;
+    /*color: #fff;*/
+    color: #222;
     font-size: 26px; }
 
     .nav-up {
@@ -645,7 +649,7 @@ div.gm-style-cc {
  14. Footer
 **********************************/
 footer {
-  background-color: #333333;
+  background-color: #fff;
   text-align: center;
   padding-top: 80px;
   padding-bottom: 0; }

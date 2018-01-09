@@ -23,6 +23,11 @@
 
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/font-awesome.min.css') }}" />
 
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+
         <!-- CSS -->
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/bootstrap.min.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/vanillabox.css') }}" />
@@ -54,7 +59,7 @@
               @include('includes.partials.logged-in-as')
               @include('frontend.includes.nav')
 
-              <div class="container topper full-screen">
+              <div class="full-screen">
                   @include('includes.partials.messages')
                   @yield('content')
               </div><!-- container -->
@@ -121,8 +126,20 @@
 		lastScrollTop = st;
 	}
 
+  $(document).ready(function(){
+    $('.slick-container').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
+  });
+
 </script>
 
         @include('includes.partials.ga')
+
+        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     </body>
 </html>
