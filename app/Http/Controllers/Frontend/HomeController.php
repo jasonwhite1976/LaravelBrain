@@ -14,6 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        $posts = \App\Posts::all();
+        return view('frontend.index', ['allposts' => $posts]);
     }
 }

@@ -56,7 +56,7 @@ header {
 **********************************/
 body, p, h1, h2, h3, h4, h5 {
   font-family: 'Jura', sans-serif;
-  color: #fff; }
+  color: #333; }
 
 header {
   text-align: center; }
@@ -92,7 +92,7 @@ h4 {
   font-weight: 400; }
 
 i {
-  color: #fff;
+  color: #333;
   transition: all ease-in-out 400ms;
   -webkit-transition: all ease-in-out 400ms; }
   i:hover {

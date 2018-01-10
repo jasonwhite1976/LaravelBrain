@@ -11,7 +11,7 @@
               <ul>
                 @foreach ($allposts as $post)
                     <li>
-                      <a class="post-link" href="{{ URL::to('post/'.$post->slug) }}">{!! $post->slug !!}</a>
+                      <a class="post-link" href="{{ URL::to('post/'.$post->slug) }}">{!! $post->title !!} {!! $post->created_at !!}</a>
                     </li>
                 @endforeach
               </ul>

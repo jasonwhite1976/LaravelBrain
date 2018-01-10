@@ -53,7 +53,6 @@
             </div><!--container-fluid-->
         </main><!--main-->
 
-        @include('backend.includes.aside')
     </div><!--app-body-->
 
     @include('backend.includes.footer')
@@ -63,5 +62,12 @@
     {!! script(mix('js/backend.js')) !!}
     <script type="text/javascript" src="{{ URL::asset('js/summernote.min.js') }}"></script>
     @stack('after-scripts')
+
+    <script>
+    $('#summernote').summernote({
+      fontNames: ['Arial', 'Jura', 'Courier New']
+    });
+    </script>
+
 </body>
 </html>
