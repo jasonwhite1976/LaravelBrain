@@ -23,15 +23,12 @@
 
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/font-awesome.min.css') }}" />
 
-        <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
-        <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
-
         <!-- CSS -->
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/bootstrap.min.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/vanillabox.css') }}" />
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/animsition.min.css') }}" />
+        <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/slick.css') }}" />
+        <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/slick-theme.css') }}" />
 
         <!-- Main CSS-->
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/style-fluid.css') }}" />
@@ -78,6 +75,7 @@
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/isotope.pkgd.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/validator.min.js') }}"></script>
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/form-scripts.js') }}"></script>
+        <script type="text/javascript" src="{{ URL::asset('js/frontend-js/slick.min.js') }}"></script>
         <!-- <script type="text/javascript" src="{{ URL::asset('js/frontend-js/map.js') }}"></script> -->
         <script type="text/javascript" src="{{ URL::asset('js/frontend-js/scripts.js') }}"></script>
 
@@ -128,6 +126,7 @@
 
   $(document).ready(function(){
     $('.slick-container').slick({
+      lazyLoad: 'ondemand',
       autoplay: true,
       dots: true,
       infinite: true,

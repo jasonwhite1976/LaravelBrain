@@ -42,6 +42,9 @@ header {
   padding-top: 115px;
   margin-bottom: 100px; }
 
+img {
+  width: 100%; }
+
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0; }
@@ -50,6 +53,30 @@ header {
   float: none;
   margin: 0 auto;
   padding: 0; }
+
+
+.slick-container{
+	 visibility:hidden;
+	 opacity:0;
+	 transition: opacity 1s;
+}
+
+.slick-container.slick-initialized{
+	visibility:visible;
+	opacity:1;
+}
+
+.slick-container .your-item{
+	display:none ;
+}
+
+.slick-container .your-item:first-child{
+	display:block; visibility:hidden;
+}
+
+.slick-container.slick-initialized img{
+	display:block;visibility:visible!important;
+}
 
 /**********************************
  02. Typography
