@@ -12867,10 +12867,6 @@ h6,
   margin-right: 0;
 }
 
-.navbar-toggler {
-  padding: 0 1rem 0 0;
-}
-
 .slick-slide img {
   width: 100%;
 }
@@ -12878,6 +12874,14 @@ h6,
 @media only screen and (max-width: 480px) {
   .navbar-brand {
     padding: 0;
+  }
+
+  .navbar-toggler {
+    padding: 0;
+  }
+
+  .navbar-toggle {
+    margin: 0;
   }
 }
 
