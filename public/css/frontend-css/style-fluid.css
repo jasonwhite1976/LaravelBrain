@@ -862,6 +862,10 @@ p.gallery-text {
     width: auto;
   }
 
+  .navbar-brand {
+    padding: 0;
+  }
+
   #intro h1 {
     font-size: 60px; }
 
