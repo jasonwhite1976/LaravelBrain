@@ -12864,6 +12864,11 @@ h6,
 
 .navbar-brand {
   height: 69px;
+  margin-right: 0;
+}
+
+.navbar-toggler {
+  padding: 0 1rem 0 0;
 }
 
 .slick-slide img {

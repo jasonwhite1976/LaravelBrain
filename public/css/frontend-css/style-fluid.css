@@ -219,7 +219,7 @@ i {
     height: 3px; }
 
 .icon-bar {
-  background: #fff;
+  background: #1e1e1e;
   padding-bottom: 3px;
 }
 
@@ -852,6 +852,16 @@ p.gallery-text {
     margin-right: 10px; } }
 
 @media only screen and (max-width: 480px) {
+
+  .slick-container.slick-initialized {
+    padding-top: 70px;
+  }
+
+  .slick-container.slick-initialized img {
+    height: 300px;
+    width: auto;
+  }
+
   #intro h1 {
     font-size: 60px; }
 

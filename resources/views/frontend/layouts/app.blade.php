@@ -8,9 +8,21 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>@yield('title', app_name())</title>
-        <meta name="description" content="@yield('meta_description', 'Laravel 5 Boilerplate')">
-        <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
+
+        @php
+        if( isset($post->post_seo_title) && Request::url() != url('/') ){
+          $page_title = 'Hexagon Brain | ' . $post->post_seo_title;
+          $page_description = $post->post_seo_description;
+        } else {
+          $page_title = 'Hexagon Brain';
+          $page_description = 'Hexagon Brain Website';
+        }
+        @endphp
+
+        <title>@yield('title', $page_title )</title>
+        <meta name="author" content="@yield('meta_author', 'Hexagon Brain')">
+        <meta name="description" content="@yield('meta_description', $page_description)">
+
         @yield('meta')
 
         <!-- Favicon -->
@@ -18,7 +30,6 @@
         <link href="apple-touch-icon.png" rel="apple-touch-icon" />
 
         <!-- Fonts -->
-        <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700,800' rel='stylesheet' type='text/css' /> -->
         <link href="https://fonts.googleapis.com/css?family=Jura:400,600" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ URL::asset('css/frontend-css/font-awesome.min.css') }}" />

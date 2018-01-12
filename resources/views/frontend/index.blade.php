@@ -31,7 +31,7 @@
         @endif
 
         <div class="col-md-4">
-          <p style="text-align:center"><i class="fa fa-2x fa-pencil"></i></p>
+          <p style="text-align:center"><img style="width:140px;border-radius:50%;" src="/uploads/{!! $post->post_image !!}" /></p>
           <h2 style="text-align:center"><a class="post-link" href="{{ URL::to('post/'.$post->slug) }}">{!! $post->title !!}</a></h2>
           {!! $post->created_at !!}
           @php

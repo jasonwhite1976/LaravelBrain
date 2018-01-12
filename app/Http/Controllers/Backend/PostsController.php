@@ -43,7 +43,11 @@ class PostsController extends Controller
       $this->validate($request, [
         'title' => 'required|max:255',
         'slug' => 'required|max:255',
-        'post_content' => 'required'
+        'post_content' => 'required',
+        'post_excerpt' => 'filled',
+        'post_image' => '|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'post_seo_title' => 'filled',
+        'post_seo_description' => 'filled'
       ]);
 
       $data = $request->input('post_content');
@@ -77,8 +81,17 @@ class PostsController extends Controller
         }
       }
 
+      //$post_image_file = time().'.'.$request->post_image->getClientOriginalExtension();
+      $post_image_file = time().'.'.$request->post_image->getClientOriginalName();
+      $request->post_image->move(public_path('uploads'), $post_image_file);
+
+      $post->post_image = $post_image_file;
       $post->title = $request->input('title');
       $post->slug = $request->input('slug');
+      $post->post_excerpt = $request->input('post_excerpt');
+      $post->post_seo_title = $request->input('post_seo_title');
+      $post->post_seo_description = $request->input('post_seo_description');
+
       $post->post_content = $dom->saveHTML();
       $post->save();
 
@@ -91,7 +104,11 @@ class PostsController extends Controller
       $this->validate($request, [
         'title' => 'required|max:255',
         'slug' => 'required|max:255',
-        'post_content' => 'required'
+        'post_content' => 'required',
+        'post_excerpt' => 'filled',
+        'post_image' => '|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'post_seo_title' => 'filled',
+        'post_seo_description' => 'filled'
       ]);
 
       $data = $request->input('post_content');
@@ -125,8 +142,19 @@ class PostsController extends Controller
         }
       }
 
+      //$post_image_file = time().'.'.$request->post_image->getClientOriginalExtension();
+      if( $request->post_image !== null) {
+        $post_image_file = time().'.'.$request->post_image->getClientOriginalName();
+        $request->post_image->move(public_path('uploads'), $post_image_file);
+        $post->post_image = $post_image_file;
+      }
+
       $post->title = $request->input('title');
       $post->slug = $request->input('slug');
+      $post->post_excerpt = $request->input('post_excerpt');
+      $post->post_seo_title = $request->input('post_seo_title');
+      $post->post_seo_description = $request->input('post_seo_description');
+
       $post->post_content = $dom->saveHTML();
       $post->save();
 

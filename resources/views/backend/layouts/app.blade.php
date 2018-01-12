@@ -65,7 +65,8 @@
 
     <script>
     $('#summernote').summernote({
-      fontNames: ['Arial', 'Jura', 'Courier New']
+      fontNames: ['Arial', 'Jura', 'Courier New'],
+      height: 200
     });
     </script>
 
