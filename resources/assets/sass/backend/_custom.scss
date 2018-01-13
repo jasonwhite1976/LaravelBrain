@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     display: none;
 }
 
+.modal-dialog {
+    margin: 100px auto;
+}
+
 .links ul {
     list-style: none;
 }
@@ -44,4 +48,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .sidebar-fixed .main, .sidebar-fixed .app-footer {
   margin-top: 30px;
+}
+
+form {
+  padding-bottom: 1rem;
 }

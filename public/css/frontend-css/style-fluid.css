@@ -863,6 +863,10 @@ p.gallery-text {
   }
 
   .navbar-brand {
+    padding: 0 0 0 5px;
+  }
+
+  #nav1 {
     padding: 0;
   }
 
@@ -884,9 +888,6 @@ p.gallery-text {
     margin-right: 4px; } }
 
 @media only screen and (max-width: 380px) {
-  #nav1 {
-    padding: 0;
-  }
 
   #intro h1 {
     font-size: 50px; }

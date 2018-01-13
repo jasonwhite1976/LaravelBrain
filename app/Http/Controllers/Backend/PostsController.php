@@ -43,6 +43,8 @@ class PostsController extends Controller
       $this->validate($request, [
         'title' => 'required|max:255',
         'slug' => 'required|max:255',
+        'post_homepage_position' => 'max:255',
+        'post_date' => 'required|max:255',
         'post_content' => 'required',
         'post_excerpt' => 'filled',
         'post_image' => '|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -88,6 +90,8 @@ class PostsController extends Controller
       $post->post_image = $post_image_file;
       $post->title = $request->input('title');
       $post->slug = $request->input('slug');
+      $post->post_homepage_position = $request->input('post_homepage_position');
+      $post->post_date = $request->input('post_date');
       $post->post_excerpt = $request->input('post_excerpt');
       $post->post_seo_title = $request->input('post_seo_title');
       $post->post_seo_description = $request->input('post_seo_description');
@@ -104,6 +108,8 @@ class PostsController extends Controller
       $this->validate($request, [
         'title' => 'required|max:255',
         'slug' => 'required|max:255',
+        'post_homepage_position' => 'max:255',
+        'post_date' => 'required|max:255',
         'post_content' => 'required',
         'post_excerpt' => 'filled',
         'post_image' => '|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -151,6 +157,8 @@ class PostsController extends Controller
 
       $post->title = $request->input('title');
       $post->slug = $request->input('slug');
+      $post->post_homepage_position = $request->input('post_homepage_position');
+      $post->post_date = $request->input('post_date');
       $post->post_excerpt = $request->input('post_excerpt');
       $post->post_seo_title = $request->input('post_seo_title');
       $post->post_seo_description = $request->input('post_seo_description');
