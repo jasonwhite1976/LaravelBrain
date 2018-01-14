@@ -181,11 +181,12 @@ i {
     text-transform: uppercase;
     padding-left: 20px;
     padding-right: 20px;
+    border: 1px solid transparent;
     transition: all ease-in-out 400ms;
     -webkit-transition: all ease-in-out 400ms; }
     #nav1 li a:hover {
-      color: #95EFFF;
-      opacity: 0.75; }
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid #999; }
   #nav1 a {
     /*color: #fff;*/
     color: #222;
@@ -204,8 +205,7 @@ i {
     }
 
     .topper {
-      top: 70px;
-      position: relative;
+      margin-top: 100px;
     }
 
 .navbar-default .navbar-toggle {
@@ -225,6 +225,10 @@ i {
 
 .navbar:before, .navbar:after {
   content: none;
+}
+
+.links ul {
+  padding: 0
 }
 
 /**********************************
@@ -681,7 +685,7 @@ footer {
   padding-top: 80px;
   padding-bottom: 0; }
   footer a {
-    color: #fff;
+    color: #7b7b7b;
     font-size: 16px;
     font-weight: 400; }
     footer a:hover {
@@ -696,8 +700,14 @@ footer {
   z-index: 1;
   bottom: 30px; }
 
+.copyright {
+    background: #191919;
+    margin-bottom: 0;
+    padding: 10px 0; }
+
 p.copyright {
   color: #7b7b7b; }
+
 
 /**********************************
  15. Single work

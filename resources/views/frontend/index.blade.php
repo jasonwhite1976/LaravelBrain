@@ -16,41 +16,41 @@
               <p>Hey, guess what you're accessories to. It doesn't look so shiny to me. Yes! In your face, Gandhi! Incidentally, you have a dime up your nose. Bender, this is Fry's decision… and he made it wrong. So it's time for us to interfere in his life.</p>
             </div>
     </div><!--row-->
-  </div><!--container-->
+</div><!--container-->
 
 <div class="container">
 
-        @php
-          $postcount = 0;
-        @endphp
+    @php
+      $postcount = 0;
+    @endphp
 
-        @foreach ($allposts as $post)
+    @foreach ($allposts as $post)
 
-        @if( 0 === $postcount % 3 )
-          <div class="row">
-        @endif
+    @if( 0 === $postcount % 3 )
+      <div class="row">
+    @endif
 
-        <div class="col-md-4">
-          <p style="text-align:center"><img style="width:140px;border-radius:50%;" src="/uploads/{!! $post->post_image !!}" /></p>
-          <h2 style="text-align:center"><a class="post-link" href="{{ URL::to('post/'.$post->slug) }}">{!! $post->title !!}</a></h2>
-          {!! $post->post_date !!}
-          @php
-              $tagless = strip_tags($post->post_content);
-              $truncated = str_limit($tagless, 100, ' ');
-          @endphp
-          <p>{{ $truncated }}<a class="post-link" href="{{ URL::to('post/'.$post->slug) }}">read more</a></p>
-        </div>
+    <div class="col-md-4">
+      <p style="text-align:center"><img style="width:140px;border-radius:50%;" src="/uploads/{!! $post->post_image !!}" /></p>
+      <h2 style="text-align:center"><a class="post-link" href="{{ URL::to('post/'.$post->slug) }}">{!! $post->title !!}</a></h2>
+      {!! $post->post_date !!}
+      @php
+          $tagless = strip_tags($post->post_content);
+          $truncated = str_limit($tagless, 100, ' ');
+      @endphp
+      <p>{{ $truncated }}<a class="post-link" href="{{ URL::to('post/'.$post->slug) }}">read more</a></p>
+    </div>
 
-        @if( 0 === ($postcount + 1) % 3 )
-          </div>
-        @endif
+    @if( 0 === ($postcount + 1) % 3 )
+      </div><!--row-->
+    @endif
 
         @php
           $postcount++;
         @endphp
 
         @endforeach
-    </div><!--row-->
+
   </div><!--container-->
 
 @endsection

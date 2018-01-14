@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<div class="container topper">
-    <div class="row mb-12">
+<div class="container">
+    <div class="row mb-12 topper">
         <div class="col">
 
           <h1>{!! $post->title !!}</h1>

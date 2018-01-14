@@ -46,8 +46,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #000;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .card div p {
-    /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
     font-family: 'Jura', sans-serif;
     font-size: 14px;
     color: #000;
@@ -76,4 +79,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .slick-slide img {
     width: 100%;
+}
+
+.alert {
+    position: relative;
+    top: 74px;
 }

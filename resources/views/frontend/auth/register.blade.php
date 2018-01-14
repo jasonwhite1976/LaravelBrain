@@ -3,8 +3,8 @@
 @section('title', app_name() . ' | Register')
 
 @section('content')
-<div class="container topper">
-    <div class="row justify-content-center align-items-center">
+<div class="container">
+    <div class="row justify-content-center align-items-center topper">
         <div class="col col-sm-8 align-self-center">
             <div class="card">
                 <div class="card-header">

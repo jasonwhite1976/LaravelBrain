@@ -11,6 +11,7 @@
 
     <div class="navbar-collapse collapse  justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('frontend.post.allposts')}}">Posts</a></li>
 
             @auth
@@ -18,10 +19,10 @@
             @endauth
 
             @guest
-                <!-- <li class="nav-item"><a href="{{route('frontend.auth.login')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.auth.login')) }}">{{ __('navs.frontend.login') }}</a></li> -->
+                <li class="nav-item"><a href="{{route('frontend.auth.login')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.auth.login')) }}">{{ __('navs.frontend.login') }}</a></li>
 
                 @if (config('access.registration'))
-                    <!-- <li class="nav-item"><a href="{{route('frontend.auth.register')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.auth.register')) }}">{{ __('navs.frontend.register') }}</a></li> -->
+                    <li class="nav-item"><a href="{{route('frontend.auth.register')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.auth.register')) }}">{{ __('navs.frontend.register') }}</a></li>
                 @endif
             @else
                 <li class="nav-item dropdown">

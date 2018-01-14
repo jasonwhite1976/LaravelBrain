@@ -3,8 +3,8 @@
 @section('title', app_name() . ' | Login')
 
 @section('content')
-<div class="container topper">
-    <div class="row justify-content-center align-items-center">
+<div class="container">
+    <div class="row justify-content-center align-items-center topper">
         <div class="col col-sm-8 align-self-center">
             <div class="card">
                 <div class="card-header">
@@ -48,6 +48,7 @@
                                     <div class="checkbox">
                                         {{ html()->label(html()->checkbox('remember', true, 1) . ' ' . __('labels.frontend.auth.remember_me'))->for('remember') }}
                                     </div>
+                                    <p>No account? - <a href="/register">Register</a></p>
                                 </div><!--form-group-->
                             </div><!--col-->
                         </div><!--row-->
@@ -77,7 +78,7 @@
                         </div><!--col-->
                     </div><!--row-->
                 </div><!--card body-->
-            </div><!--card-->
+            </div><!--card-->`
         </div><!-- col-md-8 -->
     </div><!-- row -->
   </div>
