@@ -9,6 +9,7 @@ class Link extends Model
     protected $fillable = [
         'title',
         'url',
+        'icon',
         'description'
     ];
 }

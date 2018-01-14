@@ -17,9 +17,15 @@ class HomeController extends Controller
 
         $posts = \App\Posts::orderBy('post_homepage_position', 'ASC')->whereNotNull('post_homepage_position')->get();
 
+        $links = \App\Link::all();
+
         //$posts = \App\Posts::all();
-        return view('frontend.index', ['allposts' => $posts]);
+        return view(
+        'frontend.index',
+        [
+          'all_posts' => $posts,
+          'all_links' => $links
+        ])
+        ;
     }
 }
-
-//SELECT * FROM table_name ORDER BY CAST(field_name as SIGNED INTEGER) ASC
