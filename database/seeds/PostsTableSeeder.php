@@ -15,7 +15,7 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-      
+
         $this->disableForeignKeys();
 
         Posts::create([
@@ -25,7 +25,7 @@ class PostsTableSeeder extends Seeder
             'post_homepage_position' => '0',
             'post_content' => 'In a jeep ',
             'post_excerpt' => 'In a jeep ',
-            'post_image' => '1516003468.jasonjeep.jpg',
+            'post_image' => '//www.hexagonbrain.com/img/jasonjeep.jpg',
             'post_seo_title' => 'In a jeep ',
             'post_seo_description'  => 'In a jeep - yeah!'
         ]);
@@ -34,22 +34,22 @@ class PostsTableSeeder extends Seeder
             'title' => 'Jeep 2',
             'slug' => 'jeep2',
             'post_date' => '15th Jan 2018',
-            'post_homepage_position' => '0',
+            'post_homepage_position' => '1',
             'post_content' => 'In a jeep ',
             'post_excerpt' => 'In a jeep ',
-            'post_image' => '1516003468.jasonjeep.jpg',
+            'post_image' => '//www.hexagonbrain.com/img/coral-thumb.jpg',
             'post_seo_title' => 'In a jeep ',
-            'post_seo_description'  => 'In a jeep - yeah!'
+            'post_seo_description'  => 'Coral brain - yeah!'
         ]);
 
         Posts::create([
-            'title' => 'Jeep 3',
+            'title' => 'Shuttle Model',
             'slug' => 'jeep3',
-            'post_date' => '15th Jan 2018',
-            'post_homepage_position' => '0',
+            'post_date' => '16th Jan 2018',
+            'post_homepage_position' => '3',
             'post_content' => 'In a jeep ',
             'post_excerpt' => 'In a jeep ',
-            'post_image' => '1516003468.jasonjeep.jpg',
+            'post_image' => '//www.hexagonbrain.com/img/shuttlemodel-thumb.jpg',
             'post_seo_title' => 'In a jeep ',
             'post_seo_description'  => 'In a jeep - yeah!'
         ]);

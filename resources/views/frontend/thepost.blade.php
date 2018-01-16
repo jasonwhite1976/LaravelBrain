@@ -5,7 +5,7 @@
     <div class="row mb-12 topper">
         <div class="col-sm-2">
 
-          <p><img style="width:140px;border-radius:50%;" src="/uploads/{!! $post->post_image !!}" /></p>
+          <p><img style="width:140px;border-radius:50%;" src="{!! $post->post_image !!}" /></p>
 
         </div>
         <div class="col-sm-10">

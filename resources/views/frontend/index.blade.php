@@ -69,7 +69,7 @@
     @endif
 
     <div class="col-md-4">
-      <p style="text-align:center"><img style="width:140px;border-radius:50%;" src="/uploads/{!! $post->post_image !!}" /></p>
+      <p style="text-align:center"><img style="width:140px;border-radius:50%;" src="{!! $post->post_image !!}" /></p>
       <h2 style="text-align:center"><a class="post-link" href="{{ URL::to('post/'.$post->slug) }}">{!! $post->title !!}</a></h2>
       {!! $post->post_date !!}
       @php
