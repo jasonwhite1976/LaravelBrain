@@ -25,7 +25,7 @@ class PostsTableSeeder extends Seeder
             'post_homepage_position' => '0',
             'post_content' => 'In a jeep ',
             'post_excerpt' => 'In a jeep ',
-            'post_image' => '//www.hexagonbrain.com/img/jasonjeep.jpg',
+            'post_image' => '//www.hexagonbrain.com/img/posts/jasonjeep.jpg',
             'post_seo_title' => 'In a jeep ',
             'post_seo_description'  => 'In a jeep - yeah!'
         ]);
@@ -37,7 +37,7 @@ class PostsTableSeeder extends Seeder
             'post_homepage_position' => '1',
             'post_content' => 'In a jeep ',
             'post_excerpt' => 'In a jeep ',
-            'post_image' => '//www.hexagonbrain.com/img/coral-thumb.jpg',
+            'post_image' => '//www.hexagonbrain.com/img/posts/coral-thumb.jpg',
             'post_seo_title' => 'In a jeep ',
             'post_seo_description'  => 'Coral brain - yeah!'
         ]);
@@ -49,7 +49,7 @@ class PostsTableSeeder extends Seeder
             'post_homepage_position' => '3',
             'post_content' => 'In a jeep ',
             'post_excerpt' => 'In a jeep ',
-            'post_image' => '//www.hexagonbrain.com/img/shuttlemodel-thumb.jpg',
+            'post_image' => '//www.hexagonbrain.com/img/posts/shuttlemodel-thumb.jpg',
             'post_seo_title' => 'In a jeep ',
             'post_seo_description'  => 'In a jeep - yeah!'
         ]);
