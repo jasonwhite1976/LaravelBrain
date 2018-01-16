@@ -15,7 +15,6 @@ class LinksTableSeeder extends Seeder
      */
     public function run()
     {
-        //factory(App\Link::class, 5)->create();
 
         $this->disableForeignKeys();
 
@@ -24,6 +23,20 @@ class LinksTableSeeder extends Seeder
             'url' => '//www.bbc.co.uk',
             'icon' => '<i class="fa fa-2x fa-link"></i>',
             'description' => 'The BBC',
+        ]);
+
+        Link::create([
+            'title' => 'Udemy',
+            'url' => '//www.udemy.com',
+            'icon' => '<i class="fa fa-2x fa-university"></i>',
+            'description' => 'Udemy',
+        ]);
+
+        Link::create([
+            'title' => 'Free Code Camp',
+            'url' => '//www.freecodecamp.org',
+            'icon' => '<i class="fa fa-2x fa-free-code-camp"></i>',
+            'description' => 'Free Code Camp',
         ]);
 
         $this->enableForeignKeys();

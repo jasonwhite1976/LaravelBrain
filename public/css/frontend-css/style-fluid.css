@@ -122,8 +122,8 @@ i {
   color: #333;
   transition: all ease-in-out 400ms;
   -webkit-transition: all ease-in-out 400ms; }
-  i:hover {
-    color: #95EFFF; }
+  /*i:hover {
+    color: #95EFFF; }*/
 
 /**********************************
  03. Buttons

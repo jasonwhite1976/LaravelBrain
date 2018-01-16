@@ -12,8 +12,16 @@
     <div class="row mb-4">
         <div class="col-md-12">
           <h1>Hexagon Brain</h1>
-          <p>Fetal stemcells, aren't those controversial? OK, this has gotta stop. I'm going to remind Fry of his humanity the way only a woman can. Is today's hectic lifestyle making you tense and impatient? Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor.</p>
-          <p>Hey, guess what you're accessories to. It doesn't look so shiny to me. Yes! In your face, Gandhi! Incidentally, you have a dime up your nose. Bender, this is Fry's decision… and he made it wrong. So it's time for us to interfere in his life.</p>
+          <p>Built with Laravel, Hexagon Brain is a web app that currently has the following functionality:</p>
+          <ul style="list-style:outside">
+            <li>register</li>
+            <li>sign in</li>
+            <li>transactional emails</li>
+            <li>user management</li>
+            <li>create posts and links</li>
+            <li>comment on posts</li>
+          </ul>
+          <p>The site is for hosting and sharing tutorials about web development and other similar content.</p>
         </div>
     </div><!--row-->
 </div><!--container-->
@@ -105,7 +113,7 @@
     @endif
 
     <div class="col-md-4 text-center">
-      <a class="post-link" href="{!! $link->url !!}">{!! $link->icon !!}</a>
+      <a href="{!! $link->url !!}">{!! $link->icon !!}</a>
       <h2><a class="post-link" href="{!! $link->url !!}">{!! $link->title !!}</a></h2>
       <p><a class="post-link" href="{!! $link->url !!}">{!! $link->description !!}</a></p>
     </div>
