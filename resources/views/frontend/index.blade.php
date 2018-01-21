@@ -21,7 +21,7 @@
             <li>create posts and links</li>
             <li>comment on posts</li>
           </ul>
-          <p>The site is for hosting and sharing tutorials about web development and other similar content.</p>
+          <p>The site is for hosting and sharing tutorials about web development.</p>
         </div>
     </div><!--row-->
 </div><!--container-->

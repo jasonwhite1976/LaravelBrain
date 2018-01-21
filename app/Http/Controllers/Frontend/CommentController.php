@@ -11,6 +11,7 @@ use App\CommentVote;
 use App\CommentSpam;
 
 use App\Models\Auth\User;
+use App\Models\Auth\Role;
 use Auth;
 
 class CommentController extends Controller
@@ -68,7 +69,8 @@ class CommentController extends Controller
                     "vote" =>$voteStatus,
                     "spam" => $spam,
                     "replies" => $replies,
-                    "date" => $key->created_at->toDateTimeString()
+                    "date" => $key->created_at->toDateTimeString(),
+                    "role" => $name
                 ]);
             }
 
@@ -76,6 +78,24 @@ class CommentController extends Controller
         $collection = collect($commentsData);
         return $collection->sortBy('votes');
     }
+
+    /*******************/
+
+    public function user_role($userId)
+    {
+
+      $data = [];
+
+      //$user = App\Models\Auth\Role::where('model_id', $userId)->first();
+      //$user = Role::all();
+      //$user_role = $user->role_id;
+      $user_role = 2;
+      //$data = ['user_role' = > $user_role];
+      array_push($data,['user_role' => $user_role]);
+      return $data;
+    }
+
+    /*******************/
 
     protected function replies($commentId)
     {
@@ -116,7 +136,8 @@ class CommentController extends Controller
                     "votedByUser" => $vote,
                     "vote" => $voteStatus,
                     "spam" => $spam,
-                    "date" => $key->created_at->toDateTimeString()
+                    "date" => $key->created_at->toDateTimeString(),
+                    "role" => $name
                 ]);
             }
 

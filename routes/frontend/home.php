@@ -14,10 +14,11 @@ Route::get('allposts', 'PostsController@index')->name('post.allposts');
 Route::get('post/{slug}', 'PostsController@thepost')->name('post.thepost');
 
 Route::get('post/comments/{slug}', 'CommentController@index')->name('comments');
-
+Route::get('post/comments/{slug}', 'CommentController@index')->name('comments');
 Route::post('post/comments', 'CommentController@store')->name('comments.store');
-
 Route::post('post/comments/{commentId}/{type}', 'CommentController@update')->name('comments.update');
+
+Route::get('post/user_role/{userId}', 'CommentController@index')->name('comments.user_role');
 
 /*
  * These frontend controllers require the user to be logged in

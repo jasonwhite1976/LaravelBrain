@@ -1794,10 +1794,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 var _ = __webpack_require__("./node_modules/lodash/lodash.js");
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['commentUrl'],
+    props: ['commentUrl', 'is_full_admin'],
     data: function data() {
         var _ref;
 
@@ -1817,7 +1824,6 @@ var _ = __webpack_require__("./node_modules/lodash/lodash.js");
             var _this = this;
 
             this.$http.get('comments/' + this.commentUrl).then(function (res) {
-
                 _this.commentData = res.data;
                 _this.commentsData = _.orderBy(res.data, ['votes'], ['desc']);
                 _this.comments = 1;
@@ -38161,7 +38167,7 @@ var render = function() {
           ]),
       _vm._v(" "),
       _vm._l(_vm.commentsData, function(comment, index) {
-        return _vm.comments
+        return _vm.comments && !comment.spam
           ? _c("div", { staticClass: "comments" }, [
               !_vm.spamComments[index] || !comment.spam
                 ? _c("div", { staticClass: "comment" }, [

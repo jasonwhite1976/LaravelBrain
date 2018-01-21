@@ -181,12 +181,10 @@ i {
     text-transform: uppercase;
     padding-left: 20px;
     padding-right: 20px;
-    border: 1px solid transparent;
     transition: all ease-in-out 400ms;
     -webkit-transition: all ease-in-out 400ms; }
     #nav1 li a:hover {
-      background: rgba(255, 255, 255, 0.5);
-      border: 1px solid #999; }
+      background: rgba(240, 240, 240, 0.7 ); }
   #nav1 a {
     /*color: #fff;*/
     color: #222;

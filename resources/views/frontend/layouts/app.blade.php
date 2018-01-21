@@ -56,7 +56,11 @@
 
         <script>window.csrf = "{{ csrf_token() }}";
         @if (Auth::user())
-        window.user = {"name":"{{ Auth::user()->name }}","email":"{{ Auth::user()->email }}","id":"{{ Auth::user()->id }}"};
+        window.user = {
+          "name":"{{ Auth::user()->name }}",
+          "email":"{{ Auth::user()->email }}",
+          "id":"{{ Auth::user()->id }}"
+        };
         @endif
         </script>
 

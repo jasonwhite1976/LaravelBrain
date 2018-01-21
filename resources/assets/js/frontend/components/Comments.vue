@@ -1,14 +1,17 @@
 <template>
 <div class="comments-app">
+
     <h1>Comments</h1>
+
     <!-- From -->
     <div class="comment-form" v-if="user">
+
         <!-- Comment Avatar -->
         <div class="comment-avatar">
             <img src="//www.hexagonbrain.com/img/commentbox.png">
         </div>
 
-        <form class="form" name="form">
+       <form class="form" name="form">
             <div class="form-row">
                 <textarea class="input" placeholder="Add comment..." required v-model="message"></textarea>
                 <span class="input" v-if="errorComment" style="color:red">{{errorComment}}</span>
@@ -38,7 +41,7 @@
         </form>
     </div>
     <!-- Comments List -->
-    <div class="comments" v-if="comments" v-for="(comment,index) in commentsData">
+    <div class="comments" v-if="comments && !comment.spam" v-for="(comment,index) in commentsData">
         <!-- Comment -->
         <div v-if="!spamComments[index] || !comment.spam" class="comment">
             <!-- Comment Avatar -->
@@ -62,7 +65,9 @@
                             <li>Votes: {{comment.votes}}</li>
                             <li><a v-if="!comment.votedByUser" v-on:click="voteComment(comment.commentid,'directcomment',index,0,'up')">Up Vote</a></li>
                             <li><a v-if="!comment.votedByUser" v-on:click="voteComment(comment.commentid,'directcomment',index,0,'down')">Down Vote</a></li>
+
                             <li><a v-on:click="spamComment(comment.commentid,'directcomment',index,0)">Spam</a></li>
+
                             <li><a v-on:click="openComment(index)">Reply</a></li>
                         </ul>
                     </div>
@@ -116,7 +121,9 @@
                                         <li>Total votes: {{replies.votes}}</li>
                                         <li><a v-if="!replies.votedByUser" v-on:click="voteComment(replies.commentid,'replycomment',index,index2,'up')">Up Vote</a></li>
                                         <li><a v-if="!replies.votedByUser" v-on:click="voteComment(comment.commentid,'replycomment',index,index2,'down')">Down Vote</a></li>
+
                                         <li><a v-on:click="spamComment(replies.commentid,'replycomment',index,index2)">Spam</a></li>
+
                                         <li><a v-on:click="replyCommentBox(index2)">Reply</a></li>
                                     </ul>
                                 </div>
@@ -157,7 +164,7 @@
 <script>
 var _ = require('lodash');
 export default {
-    props: ['commentUrl'],
+    props: ['commentUrl', 'is_full_admin'],
     data() {
         return {
             comments: [],
@@ -173,7 +180,7 @@ export default {
             spamComments: [],
             errorComment: null,
             errorReply: null,
-            user: window.user
+            user: window.user,
         }
     },
     http: {
@@ -184,12 +191,10 @@ export default {
     methods: {
         fetchComments() {
             this.$http.get('comments/' + this.commentUrl).then(res => {
-
                 this.commentData = res.data;
                 this.commentsData = _.orderBy(res.data, ['votes'], ['desc']);
                 this.comments = 1;
             });
-
         },
         showComments(index) {
             if (!this.viewcomment[index]) {

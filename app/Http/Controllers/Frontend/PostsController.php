@@ -21,6 +21,7 @@ class PostsController extends Controller
     public function thepost($slug)
     {
         $post = \App\Posts::where('slug', $slug)->first();
-        return view('frontend.thepost', ['post' => $post]);
+        $current_user = \App\Models\Auth\User::all();
+        return view('frontend.thepost', ['post' => $post, 'current_user' => $current_user]);
     }
 }

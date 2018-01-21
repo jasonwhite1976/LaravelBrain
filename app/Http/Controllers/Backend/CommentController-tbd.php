@@ -10,6 +10,8 @@ use App\Comment;
 use App\CommentVote;
 use App\CommentSpam;
 
+use App\Models\Auth\Role;
+
 use App\Models\Auth\User;
 use Auth;
 
@@ -119,8 +121,6 @@ class CommentController extends Controller
                     "date" => $key->created_at->toDateTimeString()
                 ]);
             }
-
-
         }
 
         $collection = collect($replies);
