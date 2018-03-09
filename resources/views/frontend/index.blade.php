@@ -26,7 +26,7 @@
     </div><!--row-->
 </div><!--container-->
 
-<div class="container">
+<!-- <div class="container">
   <hr>
 
     <div class="row mb-4 text-center">
@@ -45,7 +45,7 @@
           <h2>Resources</h2>
           <p>It doesn't look so shiny to me.</p>
         </div>
-    </div><!--row-->
+    </div><!--row
 
 </div><!--container-->
 

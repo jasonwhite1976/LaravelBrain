@@ -19,24 +19,24 @@ class LinksTableSeeder extends Seeder
         $this->disableForeignKeys();
 
         Link::create([
-            'title' => 'BBC',
-            'url' => '//www.bbc.co.uk',
-            'icon' => '<i class="fa fa-2x fa-link"></i>',
-            'description' => 'The BBC',
+            'title' => 'Medium - Dev Channel',
+            'url' => '//medium.com/dev-channel',
+            'icon' => '<i class="fa fa-2x fa-medium"></i>',
+            'description' => 'Web Dev update from @ChromiumDev',
         ]);
 
         Link::create([
             'title' => 'Udemy',
             'url' => '//www.udemy.com',
             'icon' => '<i class="fa fa-2x fa-university"></i>',
-            'description' => 'Udemy',
+            'description' => 'Udemy online courses',
         ]);
 
         Link::create([
             'title' => 'Free Code Camp',
             'url' => '//www.freecodecamp.org',
             'icon' => '<i class="fa fa-2x fa-free-code-camp"></i>',
-            'description' => 'Free Code Camp',
+            'description' => 'Free Code Camp Web Dev learning path',
         ]);
 
         $this->enableForeignKeys();
